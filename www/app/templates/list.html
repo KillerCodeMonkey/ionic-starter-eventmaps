@@ -1,0 +1,11 @@
+<ion-view>
+  <ion-nav-title>{{search}}</ion-nav-title>
+  <ion-content padding="true">
+    <ion-list>
+      <ion-item ng-repeat="event in events track by event.id | limitTo:limit">
+        {{event.city}}
+      </ion-item>
+    </ion-list>
+    <p ng-show="events && !events.length">No events found :(</p>
+  </ion-content>
+</ion-view>
