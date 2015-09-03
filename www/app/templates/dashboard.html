@@ -28,33 +28,9 @@
         </label>
       </div>
       <button class="button button-dark button-block" ng-disabled="form.search.$invalid">Search</button>
-      <!-- <ion-list class="list-inset">
-        <ion-item class="item-divider">Search</ion-item>
-        <ion-item class="item-input">
-          <i class="icon ion-search placeholder-icon"></i>
-          <input type="text" ng-model="search.string" required="required" placeholder="City, district or event name">
-        </ion-item>
-        <ion-item class="item-checkbox">
-          <label class="checkbox">
-            <input type="checkbox" ng-model="search.satTrans">
-          </label>
-          Satellite transmission
-        </ion-item>
-        <ion-item class="item-checkbox">
-          <label class="checkbox">
-            <input type="checkbox" ng-model="search.wheelChair">
-          </label>
-          wheelchair accessibility
-        </ion-item>
-        <ion-item class="item-checkbox">
-          <label class="checkbox">
-            <input type="checkbox" ng-model="search.wheelChairLift">
-          </label>
-          wheelchair accessible lavatory
-        </ion-item>
-      </ion-list> -->
     </form>
-    <br><br>
+    <br>
+    <br>
     <ion-list>
       <ion-item class="item-divider">Next events</ion-item>
       <ion-item class="item-icon-right" ng-repeat="event in events track by event.id | limitTo:limit">

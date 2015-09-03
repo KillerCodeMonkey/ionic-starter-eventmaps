@@ -1,17 +1,23 @@
 define([
   'app',
-  'services/event'
+  'services/event',
+  'directives/googleMaps'
 ], function (app) {
   'use strict';
 
   app.controller('ResultsCtrl', [
     '$scope',
     '$stateParams',
+    '$state',
     '$timeout',
+    '$ionicHistory',
     'eventService',
-    function ($scope, $stateParams, $timeout, eventService) {
+    function ($scope, $stateParams, $state, $timeout, $ionicHistory, eventService) {
       var first = true;
       $scope.limit = 10;
+      $scope.show = {
+        list: true
+      };
 
       // show next 10
       $scope.loadMore = function () {
@@ -47,6 +53,29 @@ define([
           $scope.events = events;
         }).finally(function () {
           $scope.$broadcast('scroll.refreshComplete');
+        });
+      };
+
+      $scope.goToMap = function () {
+        $ionicHistory.currentView($ionicHistory.backView());
+        $ionicHistory.nextViewOptions({
+          disableAnimate: true
+        });
+        $state.go('results.map', {
+          search: $scope.string,
+          wheelChair: $scope.wheelChair,
+          wheelChairLift: $scope.wheelChairLift
+        });
+      };
+      $scope.goToList = function () {
+        $ionicHistory.currentView($ionicHistory.backView());
+        $ionicHistory.nextViewOptions({
+          disableAnimate: true
+        });
+        $state.go('results.list', {
+          search: $scope.search,
+          wheelChair: $scope.wheelChair,
+          wheelChairLift: $scope.wheelChairLift
         });
       };
     }

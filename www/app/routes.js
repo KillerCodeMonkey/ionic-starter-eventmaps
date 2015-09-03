@@ -22,17 +22,8 @@ define([
         })
         .state('results', {
           url: '/results/:search/:wheelChair/:wheelChairLift',
-          abstract: true,
           controller: 'ResultsCtrl',
           templateUrl: 'app/templates/results.html'
-        })
-        .state('results.list', {
-          url: '/list',
-          templateUrl: 'app/templates/list.html'
-        })
-        .state('results.map', {
-          url: 'map',
-          templateUrl: 'app/templates/map.html'
         })
         .state('results.detail', {
           url: 'graph/:id',

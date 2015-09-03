@@ -1,5 +1,9 @@
 <ion-view>
   <ion-nav-title>{{search}}</ion-nav-title>
+  <ion-nav-buttons side="right">
+    <button class="button button-clear button-dark icon ion-earth" ng-click="goToMap()">
+    </button>
+  </ion-nav-buttons>
   <ion-content>
     <ion-refresher on-refresh="reload()">
     </ion-refresher>
