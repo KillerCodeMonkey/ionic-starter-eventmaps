@@ -1,12 +1,23 @@
 define([
-  'app'
+  'app',
+  'services/page'
 ], function (app) {
   'use strict';
 
   app.controller('AppCtrl', [
     '$scope',
-    function ($scope) {
+    '$ionicModal',
+    'pageService',
+    function ($scope, $ionicModal, pageService) {
       $scope.ready = true;
+
+      pageService.get().then(function (pages) {
+        $scope.pages = pages;
+      });
+
+      $scope.open = function (index) {
+        
+      };
     }
   ]);
 });
