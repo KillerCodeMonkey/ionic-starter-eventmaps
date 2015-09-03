@@ -48,7 +48,7 @@ define([
 
         for (i; i < events.length; i = i + 1) {
           currentEvent = events[i];
-          if (currentEvent.city && currentEvent.city.indexOf(searchString) !== -1 || currentEvent.district && currentEvent.district.indexOf(searchString) !== -1) {
+          if (currentEvent.name && currentEvent.name.indexOf(searchString) !== -1 || currentEvent.city && currentEvent.city.indexOf(searchString) !== -1 || currentEvent.district && currentEvent.district.indexOf(searchString) !== -1) {
             if (check(currentEvent, satTrans, wheelChair, wheelChairLift)) {
               founds.push(currentEvent);
             }
@@ -58,6 +58,25 @@ define([
         $timeout(function () {
           deferred.resolve(angular.copy(founds));
         }, 2000);
+
+        return deferred.promise;
+      };
+
+      this.getNext = function () {
+        var deferred = $q.defer(),
+            events = [],
+            i = 0;
+
+        for (i; i < dataService.events.length; i = i + 1) {
+          if (i === 4) {
+            break;
+          }
+          events.push(dataService.events[i]);
+        }
+
+        $timeout(function () {
+          deferred.resolve(events);
+        }, 1000);
 
         return deferred.promise;
       };
@@ -83,7 +102,6 @@ define([
         }, 1000);
 
         return deferred.promise;
-
       };
     }
   ]);

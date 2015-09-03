@@ -7,17 +7,22 @@ define([
   app.controller('DashboardCtrl', [
     '$scope',
     '$state',
-    function ($scope, $state) {
+    'eventService',
+    function ($scope, $state, eventService) {
       $scope.search = {};
       $scope.goToList = function () {
         $state.go('results.list', {
           search: $scope.search.string,
           wheelChair: $scope.search.wheelChair,
           wheelChairLift: $scope.search.wheelChairLift
-        }).then(function () {
-          console.log('test');
-        }, function () {
-          console.log(arguments);
+        });
+      };
+
+      $scope.loadNext = function () {
+        eventService.getNext().then(function (events) {
+          $scope.events = events;
+        }).finally(function () {
+          $scope.$broadcast('scroll.infiniteScrollComplete');
         });
       };
     }

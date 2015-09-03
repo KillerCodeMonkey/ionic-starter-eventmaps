@@ -7,6 +7,7 @@ define([
     function () {
       this.events = [{
         id: 1,
+        name: 'Special Event',
         city: 'Grevenbroich',
         district: 'Düsseldorf',
         street: 'Kurt-Schumacher-Str',
@@ -25,6 +26,7 @@ define([
         website: 'http://example.com'
       }, {
         id: 2,
+        name: 'Special Event',
         city: 'Straußfurt',
         district: 'Erfurt',
         street: 'Kurt-Schumacher-Str',
@@ -44,6 +46,7 @@ define([
         website: 'http://example.com'
       }, {
         id: 3,
+        name: 'Special Event',
         city: 'Gebesee',
         district: 'Erfurt',
         street: 'Kurt-Schumacher-Str',
@@ -63,6 +66,7 @@ define([
         website: 'http://example.com'
       }, {
         id: 4,
+        name: 'Special Event',
         city: 'Grevenbroich',
         district: 'Düsseldorf',
         street: 'Kurt-Schumacher-Str',
@@ -80,6 +84,7 @@ define([
         website: 'http://example.com'
       }, {
         id: 5,
+        name: 'Special Event',
         city: 'Schwabhausen',
         district: 'Erfurt',
         street: 'Frühlingsstraße',
@@ -101,6 +106,7 @@ define([
         website: 'http://example.com'
       }, {
         id: 6,
+        name: 'Science Event',
         city: 'Hachelbich',
         district: 'Kyffhäuserland',
         street: 'Oberdorf',
@@ -122,6 +128,7 @@ define([
         website: 'http://example.com'
       }, {
         id: 7,
+        name: 'Science Event',
         city: 'Berka',
         district: 'Sondershausen',
         street: 'Wittchental',
@@ -143,6 +150,7 @@ define([
         website: 'http://example.com'
       }, {
         id: 8,
+        name: 'Science Event',
         city: 'Roßla',
         district: 'Sangerhausen',
         street: 'Kurt-Schumacher-Str',
@@ -162,6 +170,7 @@ define([
         website: 'http://example.com'
       }, {
         id: 9,
+        name: 'Science Event',
         city: 'Kelbra',
         district: 'Sangerhausen',
         street: 'Kurt-Schumacher-Str',
@@ -181,6 +190,7 @@ define([
         website: 'http://example.com'
       }, {
         id: 10,
+        name: 'Science Event',
         city: 'Tilleda',
         district: 'Sangerhausen',
         street: 'Kurt-Schumacher-Str',
@@ -200,6 +210,7 @@ define([
         website: 'http://example.com'
       }, {
         id: 11,
+        name: 'Sport Event',
         city: 'Neuss',
         district: 'Düsseldorf',
         street: 'Kurt-Schumacher-Str',
@@ -220,6 +231,7 @@ define([
         website: 'http://example.com'
       }, {
         id: 12,
+        name: 'Sport Event',
         city: 'Krefeld',
         district: 'Düsseldorf',
         street: 'Kurt-Schumacher-Str',
@@ -240,6 +252,7 @@ define([
         website: 'http://example.com'
       }, {
         id: 13,
+        name: 'Sport Event',
         city: 'Kempen',
         district: 'Düsseldorf',
         street: 'Kurt-Schumacher-Str',
@@ -260,6 +273,7 @@ define([
         website: 'http://example.com'
       }, {
         id: 14,
+        name: 'Sport Event',
         city: 'Mühlheim an der Ruhr',
         district: 'Duisburg',
         street: 'Kurt-Schumacher-Str',
@@ -280,6 +294,7 @@ define([
         website: 'http://example.com'
       }, {
         id: 15,
+        name: 'Sport Event',
         city: 'Kreuzberg',
         district: 'Berlin',
         street: 'Kurt-Schumacher-Str',
@@ -301,6 +316,7 @@ define([
         website: 'http://example.com'
       }, {
         id: 16,
+        name: 'Sport Event',
         city: 'Charlottenburg',
         district: 'Berlin',
         street: 'Kurt-Schumacher-Str',
@@ -322,6 +338,7 @@ define([
         website: 'http://example.com'
       }, {
         id: 17,
+        name: 'Sport Event',
         city: 'Schöneberg',
         district: 'Berlin',
         street: 'Kurt-Schumacher-Str',
@@ -342,6 +359,7 @@ define([
         website: 'http://example.com'
       }, {
         id: 18,
+        name: 'Sport Event',
         city: 'Marzahn',
         district: 'Berlin',
         street: 'Kurt-Schumacher-Str',

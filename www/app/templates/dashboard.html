@@ -1,11 +1,38 @@
-<ion-view view-title="EventFinder">
+<ion-view>
+  <ion-nav-title>EventFinder <i class="icon ion-ios-location"></i></ion-nav-title>
   <ion-content padding="true">
+    <br>
+    <h3 class="text-center icon ion-navigate" style="font-size: 32px;">Fast 'n Easy</h3>
+    <br>
     <form name="form.search" ng-submit="form.search.$valid && goToList()">
-      <ion-list class="list-inset">
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" ng-model="search.string" required="required" placeholder="City, district or event name">
+      </label>
+      <div>
+        <label class="checkbox" style="display:flex; align-items: center">
+          <input type="checkbox" ng-model="search.satTrans" style="margin-right: 20px;">
+          Satellite transmission
+        </label>
+      </div>
+      <div>
+        <label class="checkbox" style="display:flex; align-items: center">
+          <input type="checkbox" ng-model="search.wheelChair" style="margin-right: 20px;">
+          wheelchair accessibility
+        </label>
+      </div>
+      <div>
+        <label class="checkbox" style="display:flex; align-items: center">
+          <input type="checkbox" ng-model="search.wheelChairLift" style="margin-right: 20px;">
+          wheelchair accessible lavatory
+        </label>
+      </div>
+      <button class="button button-dark button-block" ng-disabled="form.search.$invalid">Search</button>
+      <!-- <ion-list class="list-inset">
         <ion-item class="item-divider">Search</ion-item>
         <ion-item class="item-input">
           <i class="icon ion-search placeholder-icon"></i>
-          <input type="text" ng-model="search.string" required="required" placeholder="City or district name">
+          <input type="text" ng-model="search.string" required="required" placeholder="City, district or event name">
         </ion-item>
         <ion-item class="item-checkbox">
           <label class="checkbox">
@@ -25,8 +52,24 @@
           </label>
           wheelchair accessible lavatory
         </ion-item>
-        <button class="button button-dark button-block" ng-disabled="form.search.$invalid">Search</button>
-      </ion-list>
+      </ion-list> -->
     </form>
+    <br><br>
+    <ion-list>
+      <ion-item class="item-divider">Next events</ion-item>
+      <ion-item class="item-icon-right" ng-repeat="event in events track by event.id | limitTo:limit">
+        <h2>{{event.name}}</h2>
+        <p>
+          <b>{{event.city}}</b> / District {{event.district}}<br>
+          {{event.street}} {{event.number}}, {{event.zip}} {{event.city}}
+        </p>
+        <i class="icon ion-chevron-right"></i>
+      </ion-item>
+      <p ng-if="events && !events.length">No events found :(</p>
+    </ion-list>
+    <ion-infinite-scroll
+      ng-if="!events"
+      on-infinite="loadNext()">
+    </ion-infinite-scroll>
   </ion-content>
 </ion-view>

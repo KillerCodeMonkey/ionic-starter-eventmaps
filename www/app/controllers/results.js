@@ -7,16 +7,22 @@ define([
   app.controller('ResultsCtrl', [
     '$scope',
     '$stateParams',
+    '$timeout',
     'eventService',
-    function ($scope, $stateParams, eventService) {
+    function ($scope, $stateParams, $timeout, eventService) {
+      var first = true;
       $scope.limit = 10;
 
       // show next 10
       $scope.loadMore = function () {
-        $scope.limit += 10;
-      };
+        if (!first) {
+          $scope.limit += 10;
+          $timeout(function () {
+            $scope.$broadcast('scroll.infiniteScrollComplete');
+          }, 2000);
+          return;
+        }
 
-      $scope.$on('$ionicView.enter', function () {
         var wheelChair = $stateParams.wheelChair === 'true',
             wheelChairLift = $stateParams.wheelChairLift === 'true',
             search = $stateParams.search;
@@ -25,13 +31,24 @@ define([
           $scope.wheelChair = wheelChair;
           $scope.wheelChairLift = wheelChairLift;
           $scope.search = search;
-
+          $scope.loading = true;
           eventService.search(search, wheelChair, wheelChairLift).then(function (events) {
             $scope.limit = 10;
             $scope.events = events;
+          }).finally(function () {
+            $scope.loading = false;
           });
         }
-      });
+      };
+
+      $scope.reload = function () {
+        eventService.search($scope.search, $scope.wheelChair, $scope.wheelChairLift).then(function (events) {
+          $scope.limit = 10;
+          $scope.events = events;
+        }).finally(function () {
+          $scope.$broadcast('scroll.refreshComplete');
+        });
+      };
     }
   ]);
 });
