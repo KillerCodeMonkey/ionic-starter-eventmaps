@@ -1,6 +1,7 @@
 define([
   'app',
   // Load Controllers here
+  'controllers/app',
   'controllers/dashboard',
   'controllers/results',
   'controllers/detail'

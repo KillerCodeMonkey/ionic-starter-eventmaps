@@ -11,10 +11,8 @@
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
-
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
-
     <!-- load requirejs config -->
     <script src="main.js"></script>
     <!-- load requirejs -->
@@ -22,15 +20,19 @@
     <!-- load boot-script - it loads configs, routes, runs and bootstraps the app -->
     <script src="app/boot.js"></script>
   </head>
-  <body>
+  <body ng-controller="AppCtrl" ng-show="ready" class="ng-hide">
     <ion-side-menus>
       <!-- Left menu -->
       <ion-side-menu side="left">
         <ion-header-bar>
-          <h1 class="title">Men&#xFC;</h1>
+          <h1 class="title">Menu</h1>
         </ion-header-bar>
         <ion-content>
-
+          <ion-list>
+            <ion-item ng-click="openPage(page.alias)" ng-repeat="page in pages">
+              {{page.title}}
+            </ion-item>
+          </ion-list>
         </ion-content>
       </ion-side-menu>
 
