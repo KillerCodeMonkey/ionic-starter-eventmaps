@@ -1,16 +1,16 @@
 <ion-view>
   <ion-nav-title>{{search}}</ion-nav-title>
   <ion-nav-buttons side="right">
-    <button class="button button-clear button-dark icon" ng-class="{'ion-earth': show.list, 'ion-ios-list': !show.list}" ng-click="show.list = !show.list">
+    <button class="button button-clear button-dark icon" ng-disabled="loading" ng-class="{'ion-earth': show.list, 'ion-ios-list': !show.list}" ng-click="show.list = !show.list">
     </button>
   </ion-nav-buttons>
-  <div id="map" style="height:100%; width: 100%;" google-map api-key="AIzaSyB16sGmIekuGIvYOfNoW9T44377IU2d2Es" events="events"></div>
+  <div data-tap-disable="true" id="map" google-map style="height:100%; width: 100%;" api-key="AIzaSyB16sGmIekuGIvYOfNoW9T44377IU2d2Es" events="events"></div>
   <ion-content ng-show="show.list" style="background-color: #fff;">{{list}}
+    <ion-refresher on-refresh="reload()">
+    </ion-refresher>
     <div ng-show="show.list">
-      <ion-refresher on-refresh="reload()">
-      </ion-refresher>
       <ion-list>
-        <ion-item class="item-icon-right" ng-repeat="event in events track by event.id | limitTo:limit">
+        <ion-item ui-sref="detail({id: event.id})" class="item-icon-right" ng-repeat="event in events track by event.id | limitTo:limit">
           <h2>{{event.name}}</h2>
           <p>
             <b>{{event.city}}</b> / District {{event.district}}<br>

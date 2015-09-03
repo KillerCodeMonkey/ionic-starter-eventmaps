@@ -2,7 +2,8 @@ define([
   'app',
   // Load Controllers here
   'controllers/dashboard',
-  'controllers/results'
+  'controllers/results',
+  'controllers/detail'
 ], function (app) {
   'use strict';
   // definition of routes
@@ -25,8 +26,9 @@ define([
           controller: 'ResultsCtrl',
           templateUrl: 'app/templates/results.html'
         })
-        .state('results.detail', {
-          url: 'graph/:id',
+        .state('detail', {
+          url: '/detail/:id',
+          controller: 'DetailCtrl',
           templateUrl: 'app/templates/detail.html'
         });
     }

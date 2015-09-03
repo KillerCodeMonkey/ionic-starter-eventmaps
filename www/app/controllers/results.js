@@ -48,10 +48,12 @@ define([
       };
 
       $scope.reload = function () {
+        $scope.loading = true;
         eventService.search($scope.search, $scope.wheelChair, $scope.wheelChairLift).then(function (events) {
           $scope.limit = 10;
           $scope.events = events;
         }).finally(function () {
+          $scope.loading = false;
           $scope.$broadcast('scroll.refreshComplete');
         });
       };

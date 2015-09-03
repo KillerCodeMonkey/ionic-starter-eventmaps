@@ -33,7 +33,7 @@
     <br>
     <ion-list>
       <ion-item class="item-divider">Next events</ion-item>
-      <ion-item class="item-icon-right" ng-repeat="event in events track by event.id | limitTo:limit">
+      <ion-item class="item-icon-right" ui-sref="detail({id: event.id})" ng-repeat="event in events track by event.id | limitTo:limit">
         <h2>{{event.name}}</h2>
         <p>
           <b>{{event.city}}</b> / District {{event.district}}<br>

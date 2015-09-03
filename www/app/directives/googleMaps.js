@@ -5,9 +5,9 @@ define([
   'use strict';
 
   app.directive('googleMap', [
+    '$state',
     '$window',
-    '$ionicPosition',
-    function ($window, $ionicPosition) {
+    function ($state, $window) {
       return {
         scope: {
           events: '=',
@@ -19,6 +19,15 @@ define([
               map,
               eventsReady = false;
 
+          function addClick(marker, id) {
+            $window.google.maps.event.addListener(marker, 'click', function () {
+              console.log('click');
+              $state.go('detail', {
+                id: id
+              });
+            });
+          }
+
           function makeMarkers() {
             if (eventsReady || !scope.events) {
               return;
@@ -29,14 +38,14 @@ define([
                 mapsMarker;
             for (i; i < scope.events.length; i = i + 1) {
               mapsMarker = new $window.google.maps.Marker({
-                  position: new $window.google.maps.LatLng(scope.events[i].lat, scope.events[i].lng)
+                  position: new $window.google.maps.LatLng(scope.events[i].lat, scope.events[i].lng),
+                  map: map
               });
-              //add the marker to the map
-              mapsMarker.setMap(map);
               // center on first hit
               if (!i) {
                 map.setCenter(mapsMarker.getPosition());
               }
+              addClick(mapsMarker, scope.events[i].id);
             }
           }
 
