@@ -21,7 +21,6 @@ define([
 
           function addClick(marker, id) {
             $window.google.maps.event.addListener(marker, 'click', function () {
-              console.log('click');
               $state.go('detail', {
                 id: id
               });
@@ -39,7 +38,8 @@ define([
             for (i; i < scope.events.length; i = i + 1) {
               mapsMarker = new $window.google.maps.Marker({
                   position: new $window.google.maps.LatLng(scope.events[i].lat, scope.events[i].lng),
-                  map: map
+                  map: map,
+                  clickable: true
               });
               // center on first hit
               if (!i) {
@@ -62,28 +62,7 @@ define([
 
           function makeMapAndMarkers() {
             var mapOptions = {
-                zoom: 13,
-                styles: [
-                    {
-                        featureType: 'all',
-                        stylers: [
-                            { saturation: -100 }
-                        ]
-                    },{
-                        featureType: 'road.arterial',
-                        elementType: 'geometry',
-                        stylers: [
-                            { hue: '#000000' },
-                            { saturation: 50 }
-                        ]
-                    },{
-                        featureType: 'poi.business',
-                        elementType: 'labels',
-                        stylers: [
-                            { visibility: 'off' }
-                        ]
-                    }
-                ]
+                zoom: 13
             };
             if (!map) {
               map = new $window.google.maps.Map(element[0], mapOptions);

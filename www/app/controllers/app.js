@@ -15,8 +15,14 @@ define([
         $scope.pages = pages;
       });
 
+      $ionicModal.fromTemplateUrl('/app/templates/page.html').then(function (modal) {
+        $scope.modal = modal;
+      });
+
       $scope.open = function (index) {
-        
+        $scope.modal.show().then(function () {
+          
+        });
       };
     }
   ]);
