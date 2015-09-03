@@ -9,15 +9,17 @@ define([
     '$stateParams',
     'eventService',
     function ($scope, $stateParams, eventService) {
+      $scope.loading = true;
       eventService.getOne($stateParams.id).then(function (event) {
         $scope.event = event;
+      }).finally(function () {
+        $scope.loading = false;
       });
 
       $scope.reload = function () {
         eventService.getOne($stateParams.id).then(function (event) {
           $scope.event = event;
         }).finally(function () {
-          $scope.loading = false;
           $scope.$broadcast('scroll.refreshComplete');
         });
       };
