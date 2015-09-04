@@ -9,8 +9,9 @@ define([
     '$scope',
     '$stateParams',
     '$window',
+    '$ionicPopup',
     'eventService',
-    function ($scope, $stateParams, $window, eventService) {
+    function ($scope, $stateParams, $window, $ionicPopup, eventService) {
       $scope.loading = true;
       eventService.getOne($stateParams.id).then(function (event) {
         $scope.event = event;
@@ -42,12 +43,22 @@ define([
         if (ionic.Platform.isIOS()) {
           $window.open('maps://?q=' + $scope.event.lat + ',' + $scope.event.lng, '_system');
         } else {
-          $window.open('geo://0,0?q=' + $scope.event.lat + ',' + $scope.event.lng + '&z=15', '_system');
+          $window.open('geo://0,0?q=' + $scope.event.lat + ',' + $scope.event.lng + '(' + $scope.event.name + '/' + $scope.event.city + ')&z=15', '_system');
         }
       };
 
       $scope.report = function () {
-
+        $ionicPopup.prompt({
+          scope: $scope,
+          title: 'Report an issue',
+          subTitle: 'What\'s wrong or missing?',
+          inputType: 'text',
+          inputPlaceholder: ''
+        }).then(function (res) {
+          if (res) {
+            // here connect to backend and send report
+          }
+        });
       };
     }
   ]);
