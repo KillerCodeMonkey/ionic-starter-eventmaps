@@ -13,6 +13,7 @@ define([
       $scope.goToList = function () {
         $state.go('results', {
           search: $scope.search.string,
+          satTrans: $scope.search.satTrans,
           wheelChair: $scope.search.wheelChair,
           wheelChairLift: $scope.search.wheelChairLift
         });

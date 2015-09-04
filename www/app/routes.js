@@ -23,7 +23,7 @@ define([
           controller: 'DashboardCtrl'
         })
         .state('results', {
-          url: '/results/:search/:wheelChair/:wheelChairLift',
+          url: '/results/:search/:satTrans/:wheelChair/:wheelChairLift',
           controller: 'ResultsCtrl',
           templateUrl: 'app/templates/results.html'
         })

@@ -29,8 +29,9 @@
         </ion-header-bar>
         <ion-content>
           <ion-list>
-            <ion-item ng-click="openPage(page.alias)" ng-repeat="page in pages">
+            <ion-item class="item-icon-right" ng-click="openModal($index)" ng-repeat="page in pages">
               {{page.title}}
+              <i class="icon" ng-class="page.icon"></i>
             </ion-item>
           </ion-list>
         </ion-content>
