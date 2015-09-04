@@ -62,7 +62,8 @@ define([
 
           function makeMapAndMarkers() {
             var mapOptions = {
-                zoom: 13
+                zoom: 13,
+                disableDefaultUI: true
             };
             if (!map) {
               map = new $window.google.maps.Map(element[0], mapOptions);

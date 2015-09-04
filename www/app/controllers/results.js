@@ -22,12 +22,13 @@ define([
       // show next 10
       $scope.loadMore = function () {
         if (!first) {
-          $scope.limit += 10;
           $timeout(function () {
+            $scope.limit += 10;
             $scope.$broadcast('scroll.infiniteScrollComplete');
           }, 2000);
           return;
         }
+        first = false;
 
         var wheelChair = $stateParams.wheelChair === 'true',
             wheelChairLift = $stateParams.wheelChairLift === 'true',
@@ -43,7 +44,10 @@ define([
             $scope.events = events;
           }).finally(function () {
             $scope.loading = false;
+            $scope.$broadcast('scroll.infiniteScrollComplete');
           });
+        } else {
+          $scope.$broadcast('scroll.infiniteScrollComplete');
         }
       };
 

@@ -10,7 +10,7 @@
     </ion-refresher>
     <div ng-show="show.list">
       <ion-list>
-        <ion-item ui-sref="detail({id: event.id})" class="item-royal item-icon-right" ng-repeat="event in events track by event.id | limitTo:limit">
+        <ion-item ui-sref="detail({id: event.id})" class="item-royal item-icon-right" ng-repeat="event in events | limitTo:limit">
           <h2>{{event.name}}</h2>
           <p>
             <b>{{event.city}}</b> / District {{event.district}}<br>
@@ -19,11 +19,12 @@
           <i class="icon ion-ios-arrow-right"></i>
         </ion-item>
       </ion-list>
-      <ion-infinite-scroll
-        ng-if="!events || events.length > limit"
-        on-infinite="loadMore()">
-      </ion-infinite-scroll>
     </div>
     <p ng-show="events && !events.length">No events found :(</p>
+    <ion-infinite-scroll
+      ng-if="!events || events.length > limit"
+      class=""
+      on-infinite="loadMore()">
+    </ion-infinite-scroll>
   </ion-content>
 </ion-view>
