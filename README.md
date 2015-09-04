@@ -14,3 +14,8 @@ To use this, either create a new ionic project using the ionic node.js utility, 
 - simple and only a little bit scss styling
 - usage of ionRefresher, infiniteScroll, ionSpinner, Popups, Modals
 - Custom little Google Maps directive to show map and markers (linked markers)
+- open native map app via detail page
+- open dialer for tel contact on detail page
+- open mail app for email contact on detail page
+- open browser for website on detail page
+- random images
