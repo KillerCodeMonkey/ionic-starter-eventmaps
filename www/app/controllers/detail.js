@@ -1,3 +1,4 @@
+/* global ionic, define */
 define([
   'app',
   'services/event'
@@ -38,7 +39,15 @@ define([
       };
 
       $scope.map = function () {
-        $window.open('maps://?=' + $scope.event.lat + ',' + $scope.event.lng, '_system');
+        if (ionic.Platform.isIOS()) {
+          $window.open('maps://?q=' + $scope.event.lat + ',' + $scope.event.lng, '_system');
+        } else {
+          $window.open('geo://0,0?q=' + $scope.event.lat + ',' + $scope.event.lng + '&z=15', '_system');
+        }
+      };
+
+      $scope.report = function () {
+
       };
     }
   ]);
