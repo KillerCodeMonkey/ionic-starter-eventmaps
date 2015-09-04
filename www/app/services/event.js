@@ -68,7 +68,7 @@ define([
             i = 0;
 
         for (i; i < dataService.events.length; i = i + 1) {
-          if (i === 4) {
+          if (i === 5) {
             break;
           }
           events.push(dataService.events[i]);

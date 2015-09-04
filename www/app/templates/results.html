@@ -18,9 +18,9 @@
           </p>
           <i class="icon ion-ios-arrow-right"></i>
         </ion-item>
+        <ion-item class="text-center item-royal" ng-if="events && !events.length">No events found :(</ion-item>
       </ion-list>
     </div>
-    <p ng-show="events && !events.length">No events found :(</p>
     <ion-infinite-scroll
       ng-if="!events || events.length > limit"
       class=""
