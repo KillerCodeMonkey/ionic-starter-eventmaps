@@ -1,9 +1,9 @@
 <ion-view>
   <ion-nav-title>Details</ion-nav-title>
   <ion-content padding="true">
-    <ion-refresher on-refresh="reload()"></ion-refresher>
+    <ion-refresher class="spinner-balanced" on-refresh="reload()"></ion-refresher>
     <div class="text-center">
-      <ion-spinner ng-show="loading"></ion-spinner>
+      <ion-spinner class="spinner-balanced" ng-show="loading"></ion-spinner>
     </div>
     <div ng-show="!loading">
       <h3>{{event.name}}</h3>
@@ -41,15 +41,15 @@
       </ion-list>
     </div>
   </ion-content>
-  <ion-footer-bar>
+  <ion-footer-bar class="bar-stable">
     <div class="buttons">
-      <div class="button button-clear button-dark" ng-disabled="loading" ng-click="map()">
+      <div class="button button-clear" ng-disabled="loading" ng-click="map()">
         <i class="icon ion-map"></i> Maps
       </div>
     </div>
     <h1 class="title"></h1>
     <div class="buttons">
-      <div class="button button-clear button-dark" ng-disabled="loading" ng-click="report()">
+      <div class="button button-clear" ng-disabled="loading" ng-click="report()">
         Report
         <i class="icon ion-android-alert"></i>
       </div>

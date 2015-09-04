@@ -15,9 +15,86 @@ $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
 
+$light:                           #fff !default;
+$stable:                          #394264 !default; // bg color dark
+$positive:                        #4fc4f6 !default; // okay button popup, item headings
+$calm:                            #11c1f3 !default;
+$balanced:                        #fcb150 !default; // spinner orange
+$energized:                       #11a8ab !default; // top header türkis
+$assertive:                       #BF3030 !default;
+$royal:                           #50597b !default; // items
+$dark:                            #444 !default;
+
+$base-background-color:           $stable;
+$base-color:                      $light;
+
+$item-royal-text:                 $light;
+
+$scroll-refresh-icon-color:       $balanced;
+
+$bar-stable-text:                 $light;
+$bar-stable-border:               #383f5d;
+
+$button-default-text:             $light !default;
+$button-default-active-bg:        darken($stable, 10) !default;
+
+$checkbox-width:                  20px !default;
+$checkbox-height:                 20px !default;
+$checkbox-off-bg-color:           $royal !default;
+$checkbox-border-width:           0px !default;
+$popup-background-color:          rgba(255,255,255,1) !default;
+
+@font-face {
+    font-family: Roboto;
+    src: url(Roboto-Regular.ttf);
+}
+
+$font-family-base: Roboto;
+
+.background-stable {
+  background-color: $stable;
+}
+
+.background-royal {
+  background-color: $royal;
+}
+
+.item {
+  &.item-divider {
+    background-color: $stable;
+    border-width: 0px;
+    color: $light;
+  }
+
+  > .item-content {
+    > p {
+      color: $light;
+    }
+    > h2 {
+      color: $positive;
+      font-weight: bold;
+    }
+  }
+}
+
+.modal {
+  h1, h2, h3 {
+    color: $dark;
+  }
+}
+
+.popup .popup-body input[type="text"] {
+  border: 1px solid lighten($stable, 40);
+  padding: 0 5px;
+}
+
+.spinner svg {
+  stroke: $balanced;
+  fill: $balanced;
+}
+
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
-

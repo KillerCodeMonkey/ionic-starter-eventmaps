@@ -50,8 +50,8 @@ define([
       $scope.report = function () {
         $ionicPopup.prompt({
           scope: $scope,
-          title: 'Report an issue',
-          subTitle: 'What\'s wrong or missing?',
+          title: '<span class="energized">Report an issue</span>',
+          subTitle: '<span class="stable">What\'s wrong or missing?</span>',
           inputType: 'text',
           inputPlaceholder: ''
         }).then(function (res) {

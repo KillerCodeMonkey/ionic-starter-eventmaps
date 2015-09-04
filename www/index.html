@@ -5,12 +5,9 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title></title>
 
-    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
 
-    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <!-- compiled css output -->
     <link href="css/ionic.app.css" rel="stylesheet">
-    -->
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
     <!-- load requirejs config -->
@@ -24,12 +21,12 @@
     <ion-side-menus>
       <!-- Left menu -->
       <ion-side-menu side="left">
-        <ion-header-bar>
-          <h1 class="title">Menu</h1>
+        <ion-header-bar class="bar-energized">
+          <h1 class="title">More?</h1>
         </ion-header-bar>
-        <ion-content>
+        <ion-content class="background-royal">
           <ion-list>
-            <ion-item class="item-icon-right" ng-click="openModal($index)" ng-repeat="page in pages">
+            <ion-item class="item-royal item-icon-right" ng-click="openModal($index)" ng-repeat="page in pages">
               {{page.title}}
               <i class="icon" ng-class="page.icon"></i>
             </ion-item>
@@ -39,7 +36,7 @@
 
       <ion-side-menu-content>
         <!-- The nav bar that will be updated as we navigate -->
-        <ion-nav-bar>
+        <ion-nav-bar class="bar-energized">
           <ion-nav-back-button></ion-nav-back-button>
           <ion-nav-buttons side="left">
            <!-- Toggle left side menu -->

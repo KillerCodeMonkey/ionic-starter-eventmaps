@@ -2,13 +2,12 @@
   <ion-nav-title>EventFinder <i class="icon ion-ios-location"></i></ion-nav-title>
   <ion-content padding="true">
     <br>
-    <h3 class="text-center icon ion-navigate" style="font-size: 32px;">Fast 'n Easy</h3>
-    <br>
     <form name="form.search" ng-submit="form.search.$valid && goToList()">
       <label class="item item-input">
         <i class="icon ion-search placeholder-icon"></i>
         <input type="text" ng-model="search.string" required="required" placeholder="City, district or event name">
       </label>
+      <br />
       <div>
         <label class="checkbox" style="display:flex; align-items: center">
           <input type="checkbox" ng-model="search.satTrans" style="margin-right: 20px;">
@@ -27,19 +26,19 @@
           wheelchair accessible lavatory
         </label>
       </div>
-      <button class="button button-dark button-block" ng-disabled="form.search.$invalid">Search</button>
+      <button class="button button-balanced button-block" ng-disabled="form.search.$invalid"><b>Search</b></button>
     </form>
     <br>
     <br>
+    <h3>Next events</h3>
     <ion-list>
-      <ion-item class="item-divider">Next events</ion-item>
-      <ion-item class="item-icon-right" ui-sref="detail({id: event.id})" ng-repeat="event in events track by event.id | limitTo:limit">
-        <h2>{{event.name}}</h2>
+      <ion-item class="item-icon-right item-royal" ui-sref="detail({id: event.id})" ng-repeat="event in events track by event.id | limitTo:limit">
+        <h2 class="positive">{{event.name}}</h2>
         <p>
           <b>{{event.city}}</b> / District {{event.district}}<br>
           {{event.street}} {{event.number}}, {{event.zip}} {{event.city}}
         </p>
-        <i class="icon ion-chevron-right"></i>
+        <i class="icon ion-ios-arrow-right"></i>
       </ion-item>
       <p ng-if="events && !events.length">No events found :(</p>
     </ion-list>

@@ -1,11 +1,11 @@
 <ion-modal-view>
-  <ion-header-bar>
+  <ion-header-bar class="bar-light">
     <div class="buttons">
       <div class="button button-dark button-clear icon ion-android-close" ng-click="closeModal()"></div>
     </div>
     <h1 class="title">{{pages[currentPage].title}}</h1>
   </ion-header-bar>
   <ion-content delegate-handle="modal" class="padding">
-    <p ng-show="!opening" ng-bind-html="trustHtml(pages[currentPage].content)"></p>
+    <div ng-show="!opening" class="dark" ng-bind-html="trustHtml(pages[currentPage].content)"></div>
   </ion-content>
 </ion-modal-view>
