@@ -19,33 +19,6 @@ $dark:                            #444 !default;
   font-family: Roboto;
   src: url(Roboto-Regular.ttf); }
 
-.background-stable {
-  background-color: #394264; }
-
-.background-royal {
-  background-color: #50597b; }
-
-.item.item-divider {
-  background-color: #394264;
-  border-width: 0px;
-  color: #fff; }
-.item > .item-content > p {
-  color: #fff; }
-.item > .item-content > h2 {
-  color: #4fc4f6;
-  font-weight: bold; }
-
-.modal h1, .modal h2, .modal h3 {
-  color: #444; }
-
-.popup .popup-body input[type="text"] {
-  border: 1px solid #a0a9c9;
-  padding: 0 5px; }
-
-.spinner svg {
-  stroke: #fcb150;
-  fill: #fcb150; }
-
 /*!
   Ionicons, v2.0.1
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
@@ -7730,3 +7703,37 @@ a.button {
   opacity: 0;
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
+
+.background-stable {
+  background-color: #394264; }
+
+.background-royal {
+  background-color: #50597b; }
+
+.item.item-divider {
+  background-color: #394264;
+  border-width: 0px;
+  color: #fff; }
+.item > .item-content > p {
+  color: #fff; }
+.item > .item-content > h2 {
+  color: #4fc4f6;
+  font-weight: bold; }
+
+.image {
+  border: 2px solid #11a8ab;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px; }
+
+.modal h1, .modal h2, .modal h3 {
+  color: #444; }
+
+.popup .popup-body input[type="text"] {
+  border: 1px solid #a0a9c9;
+  padding: 0 5px; }
+
+.spinner svg {
+  stroke: #fcb150;
+  fill: #fcb150; }

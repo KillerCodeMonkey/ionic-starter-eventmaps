@@ -50,6 +50,7 @@ define([
           currentEvent = events[i];
           if (currentEvent.name && currentEvent.name.indexOf(searchString) !== -1 || currentEvent.city && currentEvent.city.indexOf(searchString) !== -1 || currentEvent.district && currentEvent.district.indexOf(searchString) !== -1) {
             if (check(currentEvent, satTrans, wheelChair, wheelChairLift)) {
+              currentEvent.thumb = 'http://lorempixel.com/200/200/sports/?' + ((new Date()).getTime() + i);
               founds.push(currentEvent);
             }
           }
@@ -71,6 +72,7 @@ define([
           if (i === 5) {
             break;
           }
+          dataService.events[i].thumb = 'http://lorempixel.com/200/200/sports/?' + ((new Date()).getTime() + i);
           events.push(dataService.events[i]);
         }
 
@@ -89,6 +91,7 @@ define([
         for (i; i < dataService.events.length; i = i + 1) {
           if (dataService.events[i].id.toString() === id.toString()) {
             event = angular.copy(dataService.events[i]);
+            event.image = 'http://lorempixel.com/620/480/sports/?' + ((new Date()).getTime() + i);
             break;
           }
         }

@@ -32,7 +32,8 @@
     <br>
     <h3>Next events</h3>
     <ion-list>
-      <ion-item class="item-icon-right item-royal" ui-sref="detail({id: event.id})" ng-repeat="event in events track by event.id | limitTo:limit">
+      <ion-item class="item-icon-right item-avatar item-royal" ui-sref="detail({id: event.id})" ng-repeat="event in events track by event.id | limitTo:limit">
+        <img ng-src="{{event.thumb}}">
         <h2 class="positive">{{event.name}}</h2>
         <p>
           <b>{{event.city}}</b> / District {{event.district}}<br>

@@ -10,7 +10,8 @@
     </ion-refresher>
     <div ng-show="show.list">
       <ion-list>
-        <ion-item ui-sref="detail({id: event.id})" class="item-royal item-icon-right" ng-repeat="event in events | limitTo:limit">
+        <ion-item ui-sref="detail({id: event.id})" class="item-royal item-avatar item-icon-right" ng-repeat="event in events | limitTo:limit">
+          <img ng-src="{{event.thumb}}">
           <h2>{{event.name}}</h2>
           <p>
             <b>{{event.city}}</b> / District {{event.district}}<br>
