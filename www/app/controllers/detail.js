@@ -26,15 +26,19 @@ define([
       };
 
       $scope.call = function () {
-        $window.open('tel://' + $scope.event.contact.tel, '_system');
+        $window.open('tel:' + $scope.event.contact.tel, '_system');
       };
 
       $scope.mail = function () {
-        $window.open('mail://' + $scope.event.contact.email, '_system');
+        $window.open('mailto:' + $scope.event.contact.email, '_system');
       };
 
       $scope.website = function () {
         $window.open($scope.event.website, '_system');
+      };
+
+      $scope.map = function () {
+        $window.open('geo:' + $scope.event.lat + ',' + $scope.event.lng, '_system');
       };
     }
   ]);
