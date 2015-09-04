@@ -17,7 +17,7 @@ define([
         $scope.pages = pages;
       });
 
-      $ionicModal.fromTemplateUrl('/app/templates/page.html', {
+      $ionicModal.fromTemplateUrl('app/templates/page.html', {
         scope: $scope
       }).then(function (modal) {
         $scope.modal = modal;

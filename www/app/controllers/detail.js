@@ -38,7 +38,7 @@ define([
       };
 
       $scope.map = function () {
-        $window.open('geo:' + $scope.event.lat + ',' + $scope.event.lng, '_system');
+        $window.open('maps://?=' + $scope.event.lat + ',' + $scope.event.lng, '_system');
       };
     }
   ]);
