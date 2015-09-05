@@ -10,16 +10,23 @@ To use this, either create a new ionic project using the ionic node.js utility, 
 
 It is a clean project without external dependencies!
 
+After that!!!:
+
+- go in www folder then app and directives
+- there open th googleMaps.js and change the apiKey with yours
+
 ## Content
 
-- Handling possible backend-requests in services
+- Handling possible backend-requests in services -> add your backend easy and fast!
 - mockdata
-- simulate backend connections with promises and timeouts
+- simulate backend connections with promises and timeouts -> you can check possible loading spinners and so on
 - simple and only a little bit scss styling
-- usage of ionRefresher, infiniteScroll, ionSpinner, Popups, Modals
-- Custom little Google Maps directive to show map and markers (linked markers)
-- open native map app via detail page
+- usage of ionRefresher, infiniteScroll, ionSpinner, Popups, Modals -> if you are new in ionic you can see all this in action
+- Custom little Google Maps directive to show map and markers (linked markers) -> no external library
+- open native maps app via detail page
 - open dialer for tel contact on detail page
 - open mail app for email contact on detail page
 - open browser for website on detail page
-- random images
+- random images :)
+
+
