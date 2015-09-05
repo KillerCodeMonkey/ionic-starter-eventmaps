@@ -15,6 +15,9 @@ After that!!!:
 - go in www folder then app and directives
 - there open the googleMaps.js and change the Google Maps apiKey with yours
 
+Finding something in the democontent:
+Type in 'Berlin', 'Ber', 'Sports' or 'Düsseldorf'
+
 ## Content
 
 - Handling possible backend-requests in services -> add your backend easy and fast!
