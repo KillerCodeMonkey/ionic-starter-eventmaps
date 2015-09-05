@@ -1,5 +1,7 @@
 # ionic-starter-eventmaps
 
+![ionic-starter-eventmaps](https://cloud.githubusercontent.com/assets/2264672/9698084/bf4d7c4e-53a7-11e5-8fc2-c8b87db876c9.png)
+
 This is an addon starter template based on [RequireJS](http://requirejs.org/) for the [Ionic Framework](http://ionicframework.com/) for event apps with the usage of Google Maps (custom directive).
 
 ## How to use this template
