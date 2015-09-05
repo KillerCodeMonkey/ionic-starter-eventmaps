@@ -13,7 +13,7 @@ It is a clean project without external dependencies!
 After that!!!:
 
 - go in www folder then app and directives
-- there open th googleMaps.js and change the apiKey with yours
+- there open the googleMaps.js and change the Google Maps apiKey with yours
 
 ## Content
 
