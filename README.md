@@ -8,6 +8,8 @@ This is an addon starter template based on [RequireJS](http://requirejs.org/) fo
 
 To use this, either create a new ionic project using the ionic node.js utility, or copy and paste this into an existing Cordova project.
 
+It is a clean project without external dependencies!
+
 ## Content
 
 - Handling possible backend-requests in services
