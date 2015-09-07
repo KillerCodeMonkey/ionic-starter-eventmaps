@@ -44,3 +44,7 @@ Type in 'Berlin', 'Ber', 'Sports' or 'Düsseldorf'
 <img src="https://cloud.githubusercontent.com/assets/2264672/9698101/4bc7cb3e-53a8-11e5-8743-a3ca5c053695.png" height="400">
 <img src="https://cloud.githubusercontent.com/assets/2264672/9698099/4bc4a8b4-53a8-11e5-840e-e5ccfcda6672.png" height="400">
 <img src="https://cloud.githubusercontent.com/assets/2264672/9698102/4bd8ec02-53a8-11e5-844b-0b199222718f.png" height="400">
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/KillerCodeMonkey/ionic-starter-eventmaps/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
