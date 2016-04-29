@@ -13,12 +13,14 @@ Or use the files from ionic market:
 
 It is a clean project without external dependencies!
 
-After that!!!:
+## Configuring the project
 
-- go in www folder then app and directives
-- there open the googleMaps.js and change the Google Maps apiKey with yours
+- go to the \www\app\templates\ folder and open up the results.html with your favorite editor
+- Edit the line <div id="map" data-tap-disabled="true" google-map style="height:100%; width: 100%;" api-key="YOUR_API_KEY" events="events"></div> to include your Google API key
 
-Finding something in the democontent:
+## Trying out the app
+
+Finding something in the demo content:
 Type in 'Berlin', 'Ber', 'Sports' or 'Düsseldorf'
 
 ## Content
