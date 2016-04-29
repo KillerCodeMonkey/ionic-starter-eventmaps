@@ -15,14 +15,19 @@ It is a clean project without external dependencies!
 
 ## Configuring the project
 
-1) go to the \www\app\templates\ folder and open up the results.html with your favorite editor
-2) Edit the following line to include your Google API key:
+1. go to the \www\app\templates\ folder and open up the results.html with your favorite editor
+2. Edit the following line to include your Google API key:
 
 ```
 <div id="map" data-tap-disabled="true" google-map style="height:100%; width: 100%;" api-key="YOUR_API_KEY" events="events"></div>
 ```
 
 ## Trying out the app
+
+1. Issue ionic serve in your shell to try out the app in your regular local browser
+2. Issue ionic run android / ios in your shell to try out the app in a real device
+
+## Example data
 
 Finding something in the demo content:
 Type in 'Berlin', 'Ber', 'Sports' or 'Düsseldorf'
