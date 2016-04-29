@@ -15,11 +15,11 @@ It is a clean project without external dependencies!
 
 ## Configuring the project
 
-1. go to the \www\app\templates\ folder and open up the results.html with your favorite editor
+1. go to the \www\app\controllers\ folder and open up the results.js with your favorite editor
 2. Edit the following line to include your Google API key:
 
-```
-<div id="map" data-tap-disabled="true" google-map style="height:100%; width: 100%;" api-key="YOUR_API_KEY" events="events"></div>
+```javascript
+$scope.apiKey = 'YOUR_API_KEY_HERE';
 ```
 
 ## Trying out the app
