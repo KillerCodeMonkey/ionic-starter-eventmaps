@@ -15,8 +15,12 @@ It is a clean project without external dependencies!
 
 ## Configuring the project
 
-- go to the \www\app\templates\ folder and open up the results.html with your favorite editor
-- Edit the line <div id="map" data-tap-disabled="true" google-map style="height:100%; width: 100%;" api-key="YOUR_API_KEY" events="events"></div> to include your Google API key
+1) go to the \www\app\templates\ folder and open up the results.html with your favorite editor
+2) Edit the following line to include your Google API key:
+
+```
+<div id="map" data-tap-disabled="true" google-map style="height:100%; width: 100%;" api-key="YOUR_API_KEY" events="events"></div>
+```
 
 ## Trying out the app
 
