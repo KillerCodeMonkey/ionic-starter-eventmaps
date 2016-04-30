@@ -13,12 +13,23 @@ Or use the files from ionic market:
 
 It is a clean project without external dependencies!
 
-After that!!!:
+## Configuring the project
 
-- go in www folder then app and directives
-- there open the googleMaps.js and change the Google Maps apiKey with yours
+1. go to the \www\app\controllers\ folder and open up the results.js with your favorite editor
+2. Edit the following line to include your Google API key:
 
-Finding something in the democontent:
+```javascript
+$scope.apiKey = 'YOUR_API_KEY_HERE';
+```
+
+## Trying out the app
+
+1. Issue ionic serve in your shell to try out the app in your regular local browser
+2. Issue ionic run android / ios in your shell to try out the app in a real device
+
+## Example data
+
+Finding something in the demo content:
 Type in 'Berlin', 'Ber', 'Sports' or 'Düsseldorf'
 
 ## Content

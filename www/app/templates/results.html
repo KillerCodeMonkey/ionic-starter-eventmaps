@@ -4,7 +4,7 @@
     <button class="button button-clear icon" ng-disabled="loading" ng-class="{'ion-earth': show.list, 'ion-ios-list': !show.list}" ng-click="show.list = !show.list">
     </button>
   </ion-nav-buttons>
-  <div id="map" data-tap-disabled="true" google-map style="height:100%; width: 100%;" api-key="AIzaSyB16sGmIekuGIvYOfNoW9T44377IU2d2Es" events="events"></div>
+  <div id="map" data-tap-disabled="true" google-map style="height:100%; width: 100%;" api-key="{{apiKey}}" events="events"></div>
   <ion-content ng-show="show.list" class="background-stable">
     <ion-refresher on-refresh="reload()">
     </ion-refresher>
