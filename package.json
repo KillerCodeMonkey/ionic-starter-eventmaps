@@ -1,6 +1,6 @@
 {
   "name": "ionic-start-eventmaps",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ionic-start-eventmaps: Startertemplate for ionic framework with Google Maps",
   "dependencies": {
     "gulp": "^3.5.6",
